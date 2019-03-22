@@ -5,6 +5,11 @@
   border-bottom: 2px dashed @silver;
   padding: 20px 0;
 
+  @media @phone {
+    .custom-layout(space-around, center);
+    padding: 15px 0 5px 0;
+  }
+
   .header-container {
     .custom-layout(space-between, center);
     align-items: center;
@@ -12,9 +17,22 @@
     width: 100%;
     margin: 0 auto;
 
+    @media @phone {
+  		.custom-layout(space-around, center);
+  		flex-direction: column;
+      flex-wrap: wrap;
+      width: 90%
+  	}
+
     nav {
       .custom-layout(space-between, center);
 		  width: 40%;
+
+      @media @phone {
+        .custom-layout(space-around, center);
+        margin-top: 20px;
+        width: 100%
+    	}
 
       a {
         text-decoration: none;

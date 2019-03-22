@@ -1,10 +1,21 @@
 .home {
 
   .cta {
+    padding-bottom: 30px;
+    border-bottom: 2px dashed @silver;
+
+    @media @phone {
+      padding-bottom: 10px;
+    }
 
     .cta-img-container{
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
+
+    .cta-content-container {
+      width: 100%;
+    }
+
   }
 
   .content-section {
@@ -18,11 +29,21 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @phone {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @phone {
+        width: 100%;
+        padding: 0;
+      }
 
       img {
         border-radius: 10px;
@@ -34,20 +55,37 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @phone {
+      flex-direction: column-reverse;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @phone {
+        padding: 0;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @phone {
+        padding: 0;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @phone {
+      width: 100%;
+      margin: 0 auto 15px;
+    }
 
     img {
       border-radius: 10px;
@@ -60,14 +98,29 @@
     display: flex;
     justify-content: space-between;
 
+    @media @phone {
+      .custom-layout(space-around, center);
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @phone {
+        width: 85%;
+        margin-bottom: 30px;
+      }
     }
   }
 
   .btn {
-    .custom-btn;
+    .custom-btn(100%, 1.7rem);
+
+    @media @phone {
+      .custom-btn(100%, 2rem);
+    }
   }
 }
 

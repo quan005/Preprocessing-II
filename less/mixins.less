@@ -11,13 +11,13 @@
 	align-content: @align;
 }
 
-.custom-btn {
+.custom-btn (@width, @font-size) {
   background-color: @eastern-blue;
   color: @white;
   padding: 10px 30px;
-  font-size: 1.7rem;
+  font-size: @font-size;
   border-radius: 10px;
-  width: 100%;
+  width: @width;
   text-align: center;
   cursor: pointer;
 }
