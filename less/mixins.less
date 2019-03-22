@@ -1,1 +1,23 @@
 // Mixins in here
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-layout(@justify, @align) {
+	display: flex;
+	justify-content: @justify;
+	align-content: @align;
+}
+
+.custom-btn {
+  background-color: @eastern-blue;
+  color: @white;
+  padding: 10px 30px;
+  font-size: 1.7rem;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
